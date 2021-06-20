@@ -1,0 +1,36 @@
+spring:
+  jpa:
+    generate-ddl: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: update
+  servlet:
+    multipart:
+      max-file-size: 2MB
+      max-request-size: 2MB
+  profiles:
+    # The commented value for `active` can be replaced with valid Spring profiles to load.
+    # Otherwise, it will be filled in by maven when building the JAR file
+    # Either way, it can be overridden by `--spring.profiles.active` value passed in the commandline or `-Dspring.profiles.active` set in `JAVA_OPTS`
+    active: @activatedProperties@  #spring.profiles.active#
+
+application:
+  name: ledger-app
+
+swagger:
+  title: Bank ledger system
+  description: Bank ledger service Apis
+  version: 1.0.0
+  termsOfServiceUrl:
+  contact:
+    name: Bank ledger system
+    email: jaswin.shah@outlook.com
+    url: https://www.ledger.com/
+  license: The Apache Software License, Version 2.0
+  licenseUrl: http://www.apache.org/licenses/LICENSE-2.0.txt
+  basePackage: com.app.ledger
+
+
+

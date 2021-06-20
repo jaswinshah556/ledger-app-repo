@@ -1,0 +1,14 @@
+spring:
+  profiles:
+    active: dev
+  datasource:
+    url: jdbc:mysql://localhost:3306/ledger-db
+    username: root
+    password: root
+    hikari:
+      connectionTimeout: 3000
+      idleTimeout: 60000
+      maxLifetime: 180000
+
+server:
+  port: 9091
